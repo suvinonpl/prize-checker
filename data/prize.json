@@ -1,14 +1,47 @@
 {
-  "0812345678": {
-    "name": "คุณสมชาย ใจดี",
-    "prize": "รางวัลที่ 1"
+  "0831863304": {
+    "name": "Panupong Tapharos",
+    "prize": "รางวัลที่ 1",
+    "image": "images/Prize1.jpg"
   },
-  "0898765432": {
-    "name": "คุณวิไลวรรณ วิเศษ",
-    "prize": "รางวัลปลอบใจ"
+  "0895981889": {
+    "name": "Narong Tuntipradub",
+    "prize": "รางวัลที่ 2",
+    "image": "images/Prize2.jpg"
   },
-  "0955554444": {
-    "name": "คุณทศพล พูลสุข",
-    "prize": "รางวัลที่ 2"
+  "0909691070": {
+    "name": "Suvinon Pluckwattanachai",
+    "prize": "รางวัลที่ 2",
+    "image": "images/Prize2.jpg"
+  },
+  "0869853443": {
+    "name": "Siwa Boontiam",
+    "prize": "รางวัลที่ 2",
+    "image": "images/Prize2.jpg"
+  },
+  "0915898857": {
+    "name": "Thanisorn Thongchawee",
+    "prize": "รางวัลที่ 3",
+    "image": "images/Prize3.jpg"
+  },
+  "0892693515": {
+    "name": "Arun Loyluean",
+    "prize": "รางวัลที่ 3",
+    "image": "images/Prize3.jpg"
+  },
+  "0847171790": {
+    "name": "Khathayut Senitantikun",
+    "prize": "รางวัลที่ 3",
+    "image": "images/Prize3.jpg"
+  },
+  "0872867135": {
+    "name": "Preecha Songkaew",
+    "prize": "รางวัลที่ 3",
+    "image": "images/Prize3.jpg"
+  },
+  "0819551495": {
+    "name": "Decha Katiwong",
+    "prize": "รางวัลที่ 3",
+    "image": "images/Prize3.jpg"
   }
 }
