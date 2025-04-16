@@ -1,7 +1,9 @@
 [
-  { "phone": "0831863304", "name": "Panupong Tapharos", "prize": "รางวัลที่ 1" },
-  { "phone": "0895981889", "name": "Narong Tuntipradub", "prize": "รางวัลที่ 2" },
-  { "phone": "0909691070", "name": "Suvinon Pluckwattanachai", "prize": "รางวัลที่ 2" },
-  { "phone": "0869853443", "name": "Siwa Boontiam", "prize": "รางวัลที่ 2" },
-  { "phone": "0915898857", "name": "Thanisorn Thongchawee", "prize": "รางวัลที่ 3" }
+  { "phone": "0831863304", "name": "Panupong Tapharos", "prize": "รางวัลที่ 1", "image": "images/Prize1.jpg" },
+  { "phone": "0895981889", "name": "Narong Tuntipradub", "prize": "รางวัลที่ 2", "image": "images/Prize2.jpg" },
+  { "phone": "0909691070", "name": "Suvinon Pluckwattanachai", "prize": "รางวัลที่ 2", "image": "images/Prize2.jpg" },
+  { "phone": "0869853443", "name": "Siwa Boontiam", "prize": "รางวัลที่ 2", "image": "images/Prize2.jpg" },
+  { "phone": "0915898857", "name": "Thanisorn Thongchawee", "prize": "รางวัลที่ 3", "image": "images/Prize3.jpg" },
+  { "phone": "0892693515", "name": "Arun Loyluean", "prize": "รางวัลที่ 3", "image": "images/Prize3.jpg" },
+  { "phone": "0847171790", "name": "Khathayut Senitantikun", "prize": "รางวัลที่ 3", "image": "images/Prize3.jpg" }
 ]
