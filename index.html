@@ -1,41 +1,55 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <title>ประกาศผลรางวัล</title>
-    <style>
-        body { font-family: 'Prompt', sans-serif; padding: 20px; background: #f4f4f4; }
-        .container { max-width: 500px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        input, button { width: 100; padding: 10px; margin-top: 10px; font-size: 16px; }
-        .result { margin-top: 20px; text-align: center; }
-        .result img { max-width: 100%; height: auto; border-radius: 10px; margin-top: 10px; }
-    </style>
+  <meta charset="UTF-8">
+  <title>ตรวจสอบรางวัล</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      max-width: 500px;
+      margin: auto;
+    }
+    input, button {
+      font-size: 1.2em;
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f0f0f0;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h2>ตรวจสอบรางวัล</h2>
-        <input type="text" id="phone" placeholder="กรอกเบอร์โทรศัพท์">
-        <button onclick="checkPrize()">ตรวจสอบ</button>
-        <div class="result" id="result"></div>
-    </div>
+  <h2>ตรวจสอบผลรางวัล</h2>
+  <input type="text" id="phone" placeholder="กรอกเบอร์โทรศัพท์">
+  <button onclick="checkPrize()">ตรวจสอบ</button>
+  <div class="result" id="result"></div>
 
-    <script>
-        let prizeData = {};
-        fetch('prize.json')
-            .then(response => response.json())
-            .then(data => { prizeData = data; });
+  <script>
+    let prizeData = [];
 
-        function checkPrize() {
-            const phone = document.getElementById('phone').value.trim();
-            const resultDiv = document.getElementById('result');
-            const person = prizeData[phone];
-            if (person) {
-                resultDiv.innerHTML = `<h3>ยินดีด้วย ${person.name}!</h3><p>${person.prize}</p><img src="${person.image}" alt="รางวัล">`;
-            } else {
-                resultDiv.innerHTML = `<p style="color:red;">ไม่พบข้อมูลเบอร์โทรศัพท์นี้ในระบบ</p>`;
-            }
-        }
-    </script>
+    fetch('data.json')
+      .then(response => response.json())
+      .then(data => {
+        prizeData = data;
+      });
+
+    function checkPrize() {
+      const phone = document.getElementById('phone').value.trim();
+      const result = prizeData.find(entry => entry.phone === phone);
+      const resultDiv = document.getElementById('result');
+
+      if (result) {
+        resultDiv.innerHTML = `<strong>ชื่อ:</strong> ${result.name}<br><strong>รางวัล:</strong> ${result.prize}`;
+      } else {
+        resultDiv.innerHTML = `<span style="color:red;">ไม่พบข้อมูลเบอร์นี้</span>`;
+      }
+    }
+  </script>
 </body>
 </html>
