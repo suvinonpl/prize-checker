@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ตรวจสอบผลรางวัล</title>
+  <style>
+    body { font-family: sans-serif; max-width: 500px; margin: auto; padding: 2rem; }
+    input, button { padding: 10px; width: 100%; margin-top: 10px; }
+    .result { margin-top: 20px; font-size: 1.2rem; }
+  </style>
+</head>
+<body>
+
+  <h1>ระบบตรวจสอบผลรางวัล</h1>
+  <input type="text" id="phone" placeholder="กรอกเบอร์โทรศัพท์">
+  <button onclick="checkPrize()">ตรวจสอบ</button>
+  <div class="result" id="result"></div>
+
+  <script>
+    async function checkPrize() {
+      const phone = document.getElementById("phone").value.trim();
+      const resultDiv = document.getElementById("result");
+
+      try {
+        const response = await fetch("data/prize.json");
+        const data = await response.json();
+
+        if (data[phone]) {
+          const entry = data[phone];
+          resultDiv.innerHTML = `ชื่อ: <strong>${entry.name}</strong><br>รางวัล: <strong>${entry.prize}</strong>`;
+          resultDiv.style.color = "green";
+        } else {
+          resultDiv.innerHTML = "ไม่พบเบอร์โทรศัพท์ในระบบ";
+          resultDiv.style.color = "red";
+        }
+      } catch (error) {
+        resultDiv.innerHTML = "เกิดข้อผิดพลาดในการโหลดข้อมูล";
+        resultDiv.style.color = "red";
+      }
+    }
+  </script>
+
+</body>
+</html>
