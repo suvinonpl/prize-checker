@@ -22,6 +22,12 @@
       background: #f0f0f0;
       border-radius: 8px;
     }
+    img.prize-img {
+      width: 100%;
+      max-width: 300px;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
@@ -45,7 +51,11 @@
       const resultDiv = document.getElementById('result');
 
       if (result) {
-        resultDiv.innerHTML = `<strong>ชื่อ:</strong> ${result.name}<br><strong>รางวัล:</strong> ${result.prize}`;
+        let html = `<strong>ชื่อ:</strong> ${result.name}<br><strong>รางวัล:</strong> ${result.prize}`;
+        if (result.image) {
+          html += `<br><img src="${result.image}" class="prize-img" alt="รูปภาพรางวัล">`;
+        }
+        resultDiv.innerHTML = html;
       } else {
         resultDiv.innerHTML = `<span style="color:red;">ไม่พบข้อมูลเบอร์นี้</span>`;
       }
